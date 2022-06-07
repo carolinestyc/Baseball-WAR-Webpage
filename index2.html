@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Baseball WAR</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+  <div class="jumbotron">
+    <!-- Add Jumbotron to Header -->
+    <div class="jumbotron text-center" style="background-image: url('https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/cfcjvwd0ankchf4sniuo'); 
+    background-position: fit; height: 300px">
+      <h1 style="color:aliceblue; font-family: verdana; -webkit-text-stroke: 2.5px black; font-size: 56px; font-weight: bold;">Predicting Major League Baseball Player Performance</h1>
+      <h2 style="color:#D50032; font-family: verdana; -webkit-text-stroke: 1.5px white; font-size: 26px; font-weight: bold;">How does injury affect player performance?</h2>
+  </div>  
+      <!-- Add Section for Project Overview -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"> 
+          <h4 style="color:#D50032; text-align: left;">Project Introduction</h4>
+            <p style="color:white; font-size: 16px; text-align: left"> With 162 games in the regular Major League Baseball season and over 900 active players in the league, there are
+              bound to be many injuries throughout 6 months of game play. Even the best of players will miss a few games
+              to small injuries. Injuries ranging from small strains to UCL (Ulnar Collateral Ligament) tears and concussions that may take a player out for 
+              5 games or for the rest of the season. However, if a player does come back to play in more games that season, how
+              productive are they?<p>
+                <p style="color:white; font-size: 16px; text-align: left"> To answer this question, a historical dataset of WAR (Wins Against Replacement) and historical injury data for all players for the
+                  2010 through 2021 seasons is used in a machine learning model.<p>
+              </div>          
+        <div class="col-md-6">
+          <h4 style="color:#D50032; text-align: left; margin-left: 50px;">Player Injuries</h4>
+            <iframe width="560" height="320" align-content="right" src="https://www.youtube.com/embed/zcog4aiKIjc" title="YouTube video player" frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+    </div>
+  </div>
+  <!-- Add 2nd Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"> 
+        <h5 style="text-align: left; margin-top: 25px;">Resources</h5>
+        <p style="text-align: left; font-size: 16px;"><a href="https://www.baseball-reference.com/about/war_explained.shtml" target="_blank" style="color: white;">Historical WAR Data</a><p>
+        <p style="text-align: left; font-size: 16px;"><a href="https://www.prosportstransactions.com/baseball/Search/SearchResults.php?Player=&Team=&BeginDate=2010-03-30&EndDate=2021-09-30&DLChkBx=yes&submit=Search&start=0" target="_blank" style="color: white">Historical Injury Data</a></p>
+        <h4>Project Team</h4>
+        <p style="color:white; font-size: 16px; text-align: flex"><a href="https://www.linkedin.com/in/michael-binger/" target="_blank" style="color: white">Michael Binger</a></p>
+        <p style="color:white; font-size: 16px; text-align: flex"><a href="https://www.linkedin.com/in/brett-liddicoat-79a1271ba/" target="_blank" style="color: white">Brett Liddicoat</a></p>
+        <p style="color:white; font-size: 16px; text-align: flex"><a href="https://www.linkedin.com/in/carolinestyc/" target="_blank" style="color: white">Caroline Styc</a></p>
+        <p style="color:white; font-size: 16px; text-align: flex"><a href="https://www.linkedin.com/in/brian-wheatley-545413228/" target="_blank" style="color: white">Brian Wheatley</a></p>
+      </div>
+      <div class="col-md-8"> 
+        <h4 style="color:#D50032; text-align: left; margin-left: 45px;">The Data</h4>
+          <p style="color:white; font-size: 16px; text-align: left; margin-left: 45px;"> Our primary sources of data were Baseball-Reference and aggregated WAR data from FanGraphs and Baseball-Reference, compiled by Neil Paine.
+            Both sources were chosen by the completeness of data, both in terms of years and players available, as well as accuracy with limited missing data.
+            Our data from each source was fairly consistent between both sources; however, we did focus on aligning player information using player name, team, and year. Through the process, we did experience a small loss of data, around 1.5%, however our group determined that was an acceptable loss, since our data included over 18,000 data rows.
+            Our team limited our data range to begin in 2010, or 12 years. We felt that there was a possibility of skewed data prior to that time, due to the steroid scandals of the 1990s and early 2000s. There's also ongoing controversy with WAR numbers favoring players in earlier years due to the variance in skill levels. Injury data before the 1990s is also far from complete.
+            Originally, we planned to host our data as PostgreSQL on AWS. However, looking at our compiled data, we determined dropping our CSV files into an AWS S3 bucket was the better solution, both in terms of access and cost.<p>
+        </div>               
+    </div>
+  </div>
+<!-- Add 3rd Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"> 
+        <h4 style="color:#D50032; text-align: left;">Questions to Answer</h4>
+          <p style="color:white; font-size: 16px; text-align: left">Can we predict a player's WAR number following an injury?<p>
+          <p style="color:white; font-size: 16px; text-align: left">Could we accurately predict a player's recovery time based on injury?<p>
+          <p style="color:white; font-size: 16px; text-align: left">Is there a direct correlation between time on the injured list and decrease in WAR?<p>
+          <p style="color:white; font-size: 16px; text-align: left">Does WAR ever bounce back to pre-injury levels and how quickly?<p>
+      </div>
+      <div class="col-md-8"> 
+        <h4 style="color:#D50032; text-align: left; margin-left: 45px;">Results</h4>
+          <p style="color:white; font-size: 16px; text-align: left; margin-left: 45px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
+            Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.
+            We settled on running our data through a neural network. Our model featured four to five hidden layers, using both the Relu and Sigmoid activations. Our model was then compiled using the Adam optimizer. We ran our data through two models – one for players with above average WAR, the other for WAR change from season to season. Through training with 100 epochs, we were able to attain a prediction accuracy of 84-86% for both models.<p>
+        </div>               
+    </div>
+  </div>
+<!--Add Section for Results Tableau Graph-->
+  <div class="row">
+    <h6 style="color:#D50032; text-align: center">Visualizing the Results</h6>
+      <h3><a class="btn btn-primary btn-lg" href="https://mdbinger.github.io/MLB_player_page/" role="button" target="_blank">Click Here for Player & Team Results</a></h3>
+    <iframe src="https://public.tableau.com/views/LeagueMLBInjuryandWARTrends/LeagueYearInjuryTrends?:language=en-US&:display_count=n&:origin=viz_share_link:showVizHome=no&:embed=true" width="610" height="690" ></iframe>
+    <iframe src="https://public.tableau.com/views/InjuryVSNon-InjuryWARComparison/InjuryVSNon-InjuryWARComparison?:language=en-US&:display_count=n&:origin=viz_share_link:showVizHome=no&:embed=true" width="610" height="690" ></iframe>
+  </div>
+  <!--Add Section for Graph Summaries-->
+  <div class="row">
+    <div class="col-md-6">
+      <p style="color:white; font-size: 16px; text-align: left; margin-left: 40px; margin-right: 40px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
+        Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.<p>
+      </div>
+      <div class="col-md-6">      
+      <p style="color:white; font-size: 16px; text-align: left; margin-left: -20px; margin-right: 105px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
+        Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.<p>
+    </div>
+  </div> 
+  <!--Add Section for Future Analysis-->
+  <div class="row">
+    <div class="col-md-6">
+      <h4 style="color:#D50032; text-align: left; margin-left: 40px;">Possibilities for Future Analysis</h4>
+        <p style="color:white; font-size: 16px; text-align: left; margin-left: 40px; margin-right: 60px;"> Our analysis is limited to overall player injuries. We have discussed that future analysis could breakdown the injury data more – 
+          to include location of injury, type of injury, or recurring injury. For example, a torn rotator cuff may be more detrimental to the WAR number for a pitcher, while knee injuries may be more impactful to a batter’s WAR. 
+          By categorizing injuries and different player positions, we could possibly observe if there are specific injuries we’d expect to impact players in a consistent way.Our modeling doesn’t fully consider a player’s team or the player’s 
+          salary when predicting WAR recovery. Further analysis may show correlation between how well a team is funded and recovery time after injury.<p>
+      </div>
+  </div> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+</body>
+
+</html>
