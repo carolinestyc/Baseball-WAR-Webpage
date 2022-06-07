@@ -32,7 +32,7 @@
               </div>          
         <div class="col-md-6">
           <h4 style="color:#D50032; text-align: left; margin-left: 50px;">Player Injuries</h4>
-            <iframe width="560" height="320" align-content="right" src="https://www.youtube.com/embed/zcog4aiKIjc" title="YouTube video player" frameborder="0" allow="accelerometer; 
+            <iframe id="ut" width="560" height="320" align-content="right" src="https://www.youtube.com/embed/zcog4aiKIjc" title="YouTube video player" frameborder="0" allow="accelerometer; 
             autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
     </div>
@@ -75,36 +75,47 @@
           <p style="color:white; font-size: 16px; text-align: left; margin-left: 45px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
             Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.
             We settled on running our data through a neural network. Our model featured four to five hidden layers, using both the Relu and Sigmoid activations. Our model was then compiled using the Adam optimizer. We ran our data through two models – one for players with above average WAR, the other for WAR change from season to season. Through training with 100 epochs, we were able to attain a prediction accuracy of 84-86% for both models.<p>
-        </div>               
+      </div>               
     </div>
   </div>
-<!--Add Section for Results Tableau Graph-->
+  <!--Add Section for Results Tableau Graph-->
   <div class="row">
     <h6 style="color:#D50032; text-align: center">Visualizing the Results</h6>
-      <h3><a class="btn btn-primary btn-lg" href="https://mdbinger.github.io/MLB_player_page/" role="button" target="_blank">Click Here for Player & Team Results</a></h3>
-    <iframe src="https://public.tableau.com/views/LeagueMLBInjuryandWARTrends/LeagueYearInjuryTrends?:language=en-US&:display_count=n&:origin=viz_share_link:showVizHome=no&:embed=true" width="610" height="690" ></iframe>
-    <iframe src="https://public.tableau.com/views/InjuryVSNon-InjuryWARComparison/InjuryVSNon-InjuryWARComparison?:language=en-US&:display_count=n&:origin=viz_share_link:showVizHome=no&:embed=true" width="610" height="690" ></iframe>
+      <h3><a class="btn btn-primary btn-lg" style="align-content: center" href="https://mdbinger.github.io/MLB_player_page/" role="button" target="_blank">Click Here for Player & Team Results</a></h3>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <iframe src="https://public.tableau.com/views/LeagueMLBInjuryandWARTrends/LeagueYearInjuryTrends?:language=en-US&:display_count=n&:origin=viz_share_link:showVizHome=no&:embed=true" width="580" height="660" ></iframe>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://public.tableau.com/views/InjuryVSNon-InjuryWARComparison/InjuryVSNon-InjuryWARComparison?:language=en-US&:display_count=n&:origin=viz_share_link:showVizHome=no&:embed=true" width="580" height="660" ></iframe>
+      </div>
+    </div>
+  </div> 
   <!--Add Section for Graph Summaries-->
-  <div class="row">
-    <div class="col-md-6">
-      <p style="color:white; font-size: 16px; text-align: left; margin-left: 40px; margin-right: 40px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
-        Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.<p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p style="color:white; font-size: 16px; text-align: left; margin-left: 0px; margin-right: 0px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
+          Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.<p>
       </div>
       <div class="col-md-6">      
-      <p style="color:white; font-size: 16px; text-align: left; margin-left: -20px; margin-right: 105px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
-        Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.<p>
+        <p style="color:white; font-size: 16px; text-align: left; margin-left: 3px; margin-right: 0px;"> We created a sample machine learning model using very small portions of the data, to ensure we prepared a model that would be capable of interpreting the data we intend to input.
+          Once we cleaned and organized our data, we put aside our initial plan to run a linear regression model on our data. The classification wasn’t what we were after.<p>
+      </div>
     </div>
   </div> 
   <!--Add Section for Future Analysis-->
-  <div class="row">
-    <div class="col-md-6">
-      <h4 style="color:#D50032; text-align: left; margin-left: 40px;">Possibilities for Future Analysis</h4>
-        <p style="color:white; font-size: 16px; text-align: left; margin-left: 40px; margin-right: 60px;"> Our analysis is limited to overall player injuries. We have discussed that future analysis could breakdown the injury data more – 
-          to include location of injury, type of injury, or recurring injury. For example, a torn rotator cuff may be more detrimental to the WAR number for a pitcher, while knee injuries may be more impactful to a batter’s WAR. 
-          By categorizing injuries and different player positions, we could possibly observe if there are specific injuries we’d expect to impact players in a consistent way.Our modeling doesn’t fully consider a player’s team or the player’s 
-          salary when predicting WAR recovery. Further analysis may show correlation between how well a team is funded and recovery time after injury.<p>
+  <div class="container">
+    <div class="row">
+        <h4 style="color:#D50032; text-align: left; margin-left: 10px;">Possibilities for Future Analysis</h4>
+          <p style="color:white; font-size: 16px; text-align: left; margin-left: 10px; margin-right: 0px;"> Our analysis is limited to overall player injuries. We have discussed that future analysis could breakdown the injury data more – 
+            to include location of injury, type of injury, or recurring injury. For example, a torn rotator cuff may be more detrimental to the WAR number for a pitcher, while knee injuries may be more impactful to a batter’s WAR. 
+            By categorizing injuries and different player positions, we could possibly observe if there are specific injuries we’d expect to impact players in a consistent way.Our modeling doesn’t fully consider a player’s team or the player’s 
+            salary when predicting WAR recovery. Further analysis may show correlation between how well a team is funded and recovery time after injury.<p>
       </div>
+    </div>  
   </div> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 
